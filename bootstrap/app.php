@@ -45,6 +45,6 @@ $router = new Router();
 require dirname(__DIR__) . '/routes/web.php';
 require dirname(__DIR__) . '/routes/api.php';
 
-$app->container()->instance(Router::class, $router);
+$container->instance(Router::class, $router);
 
 return $app;

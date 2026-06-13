@@ -20,7 +20,7 @@
         "docile/container": "^1.0",
         "docile/doctrine": "^1.0",
         "docile/events": "^1.0",
-        "docile/foundation": "^1.0",
+        "docile/foundation": "^1.0.1",
         "docile/http": "^1.0",
         "docile/routing": "^1.0",
         "docile/security": "^1.0",
