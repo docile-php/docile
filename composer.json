@@ -11,15 +11,21 @@
     ],
     "require": {
         "php": "^8.3",
+        "doctrine/orm": "^3.0",
+        "doctrine/dbal": "^4.0",
         "docile/bus": "^1.0",
+        "docile/cache": "^1.0",
         "docile/config": "^1.0",
         "docile/console": "^1.0",
         "docile/container": "^1.0",
+        "docile/doctrine": "^1.0",
         "docile/events": "^1.0",
         "docile/foundation": "^1.0",
         "docile/http": "^1.0",
         "docile/routing": "^1.0",
+        "docile/security": "^1.0",
         "docile/support": "^1.0",
+        "docile/testing": "^1.0",
         "docile/validation": "^1.0"
     },
     "require-dev": {
