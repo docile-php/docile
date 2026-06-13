@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
+require dirname(__DIR__) . '/vendor/autoload.php';
+
 use Docile\Foundation\Application;
+use Docile\Routing\Router;
 
 $app = new Application(dirname(__DIR__));
 
@@ -26,5 +29,20 @@ $composerJson = json_decode(
 foreach ($composerJson['extra']['docile']['providers'] ?? [] as $provider) {
     $app->register($provider);
 }
+
+/*
+|--------------------------------------------------------------------------
+| Bind Router
+|--------------------------------------------------------------------------
+|
+| The router is used by the HTTP Kernel to match incoming requests.
+| We bind it here so it can be injected into the Kernel.
+|
+*/
+$router = new Router();
+require dirname(__DIR__) . '/routes/web.php';
+require dirname(__DIR__) . '/routes/api.php';
+
+$app->container()->instance(Router::class, $router);
 
 return $app;
